@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #land{
+            margin: 0 auto;
+            width: 500px;
+            height: 600px;
+            background-image: url(../bird-game/land.png);
+            background-position:left bottom;
+            background-repeat: repeat-x;
+            background-size: 60%;
+            overflow: hidden;
+        }
+        #sky{
+            height: 500px;
+            background-image: url(../bird-game/sky.png);
+            background-position:left top;
+            background-size: cover;
+            position: relative;
+        }
+        #bird{
+            width: 34px;
+            height: 25px;
+            background-image: url(../bird-game/image/bird0_0.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 40px;
+            top: 200px;  
+
+        }
+        #start p{
+            position: absolute;
+            top: 140px;
+        }
+        #ready,#tap,#over,#pause{
+            position: absolute;
+            left: 180px;
+            z-index: 10;
+
+        }
+        #ready,#over{
+            left: 150px;
+            top: 100px;
+            width: 240px;
+            height: 60px;
+        }
+        #tap,#over,#pause{
+            top: 200px;
+        }
+        #end,#pause{
+            display: none;
+        }
+        #score{
+            position: absolute;
+            top: 0;
+            right: 20px;
+            z-index: 10;
+}
+    </style>
+
+</head>
+<body>
+    <div id="land">
+        <div id="sky">
+            <div id="bird"></div>
+            <div id="start">
+                <img src="../bird-game/ready.png" alt="" id="ready">
+                <img src="../bird-game/tap.png" alt="" id="tap">
+                <p>键盘上下键切换颜色</p>
+            </div>
+            <div id="end">
+                <img src="../bird-game/gameover.png" alt="" id="over">
+            </div>
+            <div id="pause">
+                <img src="../bird-game/button_play.png" alt="">
+            </div>
+            <div id="score"></div>
+        </div>
+    </div>
+    <audio src="../bird-game/audio/change.mp3" id="change-audio"></audio>
+    <audio src="../bird-game/audio/fly.mp3" id="fly-audio"></audio>
+    <audio src="../bird-game/audio/hit.mp3" id="hit-audio"></audio>
+    <audio src="../bird-game/audio/score.mp3" id="score-audio"></audio>
+    <audio src="../bird-game/audio/over.mp3" id="over-audio"></audio>
+    <audio src="../bird-game/audio/begin.mp3" id="begin-audio"></audio>
+    <script src="./js/land.js"></script>
+    <script src="./js/bird.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/pipe.js"></script>
+
+
+       
+        
+    
+    
+</body>
+</html>
